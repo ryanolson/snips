@@ -1,0 +1,5 @@
+snippet apt "install packages with apt" b
+RUN apt-get update && apt-get install -y --no-install-recommends \\
+        ${0:package} \ &&
+    rm -rf /var/lib/apt/lists/*
+endsnippet
